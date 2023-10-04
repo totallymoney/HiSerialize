@@ -1,0 +1,13 @@
+{
+  "Records": [
+    {
+      "Body": "{ \"Name\": \"Bob\", \"Size\": 2 }"
+    },
+    {
+      "Body": "{ \"Name\": \"Sue\", \"Size\": 9 }"
+    },
+    {
+      "Body": "{ \"Name\": \"Ian\", \"Size\": 5 }"
+    }
+  ]
+}

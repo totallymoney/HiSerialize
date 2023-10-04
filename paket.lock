@@ -1,0 +1,6 @@
+RESTRICTION: == net6.0
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Amazon.Lambda.Core (2.1)
+    Amazon.Lambda.SQSEvents (2.1)
+    FSharp.Core (7.0.400)

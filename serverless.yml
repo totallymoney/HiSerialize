@@ -1,0 +1,34 @@
+service: sls-HiSerialize
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-pseudo-parameters
+
+custom:
+  gsda:
+    version: ${env:VERSION, '0.0.0'}
+    deployedDate: ${env:DEPLOYED_DATE, ''}
+
+provider:
+  name: aws
+  runtime: dotnet6
+  architecture: arm64
+  deploymentMethod: direct
+  stage: ${opt:stage, 'stage'}
+  region: eu-west-1
+  profile: sandbox
+  timeout: 30
+  memorySize: 512
+  logRetentionInDays: 14
+  versionFunctions: false
+
+package:
+  artifact: package.zip
+
+functions:
+  ExampleOne:
+    handler: HiSerialize::ExampleOne::ExampleOne
+
+  ExampleTwo:
+    handler: HiSerialize::ExampleTwo::ExampleTwo

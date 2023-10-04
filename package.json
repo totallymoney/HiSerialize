@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@totallymoney/github-serverless-dotnet-artifacts": "^3.2.0",
+    "serverless": "^3.35.2",
+    "serverless-pseudo-parameters": "^2.6.1"
+  },
+  "scripts": {
+    "preinstall": "dotnet tool restore",
+    "prebuild": "dotnet paket restore",
+    "build": "dotnet build src",
+    "test": "dotnet run --project tests",
+    "publish": "gsda-publish mediaingenuity/HiSerialize src",
+    "deploy": "gsda-deploy mediaingenuity/HiSerialize",
+    "pick": "gsda-pick -e stage -e prod"
+  }
+}

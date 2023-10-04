@@ -1,0 +1,5 @@
+framework auto-detect
+source https://api.nuget.org/v3/index.json
+nuget Amazon.Lambda.Core
+nuget Amazon.Lambda.SQSEvents
+nuget FSharp.Core
